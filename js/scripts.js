@@ -66,9 +66,15 @@ const oddOrEven = num1 => {
 };
 
 const leapYear = year => {
-  if ((year % 4 === 0 && !year % 100 === 0) || year % 400 === 0) {
+  if (year % 4 === 0 && !year % 100 === 0) {
     console.log('Es un año bisiesto.');
   } else {
     console.log('No es un año bisiesto.');
+  }
+};
+
+const addValues = (val1, val2) => {
+  if (typeof val1 === 'string') {
+    val1 = Number(val1);
   }
 };
