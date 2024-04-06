@@ -46,12 +46,12 @@ const higherThreeNums = (num1, num2, num3) => {
 };
 
 const divisibleByThreeFive = num1 => {
-  if (num1 % 3 === 0) {
-    console.log('Es divisible por 3.');
+  if (num1 % 3 === 0 && num1 % 5 === 0) {
+    console.log('Es divisible por 3 y por 5.');
   } else if (num1 % 5 === 0) {
     console.log('Es divisible por 5.');
-  } else if (num1 % 3 === 0 && num1 % 5 === 0) {
-    console.log('Es divisible por 3 y por 5.');
+  } else if (num1 % 3 === 0) {
+    console.log('Es divisible por 3.');
   } else {
     console.log(num1);
   }
@@ -76,5 +76,28 @@ const leapYear = year => {
 const addValues = (val1, val2) => {
   if (typeof val1 === 'string') {
     val1 = Number(val1);
+  } else if (typeof val2 === 'string') {
+    val2 = Number(val2);
   }
+
+  const add = val1 + val2;
+  console.log(add);
 };
+
+adultOrChild('Perico', 24);
+
+higherTwoNums(29, 12);
+
+negativePositiveCero(33);
+
+threeNotes(9, 9, 10);
+
+higherThreeNums(43, 10, 98);
+
+divisibleByThreeFive(30);
+
+oddOrEven(4);
+
+leapYear(2020);
+
+addValues(8, '10');
